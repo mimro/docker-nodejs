@@ -12,6 +12,7 @@
     "express": "^4.16.4",
     "hbs": "~4.0.1",
     "morgan": "^1.9.1",
-    "serve-favicon": "^2.5.0"
+    "serve-favicon": "^2.5.0",
+    "testcafe" : "^15.1.317922"
   }
 }
