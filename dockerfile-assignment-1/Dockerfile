@@ -36,6 +36,7 @@ RUN npm install && npm cache clean
 COPY . .
 
 CMD ["tini","--","node","./bin/www"]
+CMD ["npm","install","-g","testcafe"]
 # - then it should create directory /usr/src/app for app files with 'mkdir -p /usr/src/app'
 # - Node uses a "package manager", so it needs to copy in package.json file
 # - then it needs to run 'npm install' to install dependencies from that file
