@@ -16,7 +16,7 @@
 
 # Instructions from the app developer
 # - you should use the 'node' official image, with the alpine 6.x branch (node:6-alpine)
-FROM node:6-alpine
+FROM node:16-alpine
   #  yes this is a 2-year old image of node, but all official images are always
   #  available on Docker Hub forever, to ensure even old apps still work.
   #  It is common to still need to deploy old app versions, even years later.
@@ -36,7 +36,6 @@ RUN npm install && npm cache clean
 COPY . .
 
 CMD ["tini","--","node","./bin/www"]
-CMD ["npm","install","-g","testcafe"]
 # - then it should create directory /usr/src/app for app files with 'mkdir -p /usr/src/app'
 # - Node uses a "package manager", so it needs to copy in package.json file
 # - then it needs to run 'npm install' to install dependencies from that file
